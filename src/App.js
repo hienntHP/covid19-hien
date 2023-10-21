@@ -8,6 +8,27 @@ import { Container, Typography } from '@material-ui/core';
 import '@fontsource/roboto';
 import moment from 'moment';
 import 'moment/locale/vi';
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCEFNkFlI72l-lSfXWxr5Ednrbd2wqX4gc",
+  authDomain: "covid19-hien.firebaseapp.com",
+  projectId: "covid19-hien",
+  storageBucket: "covid19-hien.appspot.com",
+  messagingSenderId: "598796716980",
+  appId: "1:598796716980:web:ac4fefa9938a63e3fb40e1",
+  measurementId: "G-40S9PEPYJL"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 moment.locale('vi');
 
